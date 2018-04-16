@@ -43,20 +43,20 @@ def setTone(key):
     elif key == 1 and current != key:
         print("1")
         speaker.duty(100)
-        speaker.freq(261)
+        speaker.freq(440)
         current = 1
     elif key == 2 and current != key:
         print("2")
         speaker.duty(100)
-        speaker.freq(392)
+        speaker.freq(494)
         current = 2
     elif key == 3 and current != key:
         print("3")
         speaker.duty(100)
-        speaker.freq(440)
+        speaker.freq(554)
         current = 3
     elif key == 4 and current != key:
         print("4")
         speaker.duty(100)
-        speaker.freq(349)
+        speaker.freq(587)
         current = 4
