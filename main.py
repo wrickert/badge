@@ -1,3 +1,3 @@
-import rainbowPiano
+import prismPiano
 
-rainbowPiano.keys()
+prismPiano.keys()

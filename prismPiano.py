@@ -4,7 +4,7 @@ import neopixel
 
 
 
-pin17 = machine.Pin(17)
+pin17 = machine.Pin(2)
 speaker = machine.PWM(pin17)
 speaker.duty(0)
 

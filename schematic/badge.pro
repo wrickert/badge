@@ -1,4 +1,4 @@
-update=Tue 17 Apr 2018 02:57:06 PM CDT
+update=Mon May 14 06:49:41 2018
 version=1
 last_client=kicad
 [pcbnew]
@@ -125,3 +125,5 @@ LibName93=/usr/share/kicad/library/xilinx
 LibName94=/usr/share/kicad/library/zetex
 LibName95=/usr/share/kicad/library/Zilog
 LibName96=/usr/share/kicad/library/ESP32-footprints-Shem-Lib
+LibName97=badge-cache
+LibName98=PKMCS0909E4000-R1
