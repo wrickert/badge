@@ -4,8 +4,8 @@ import neopixel
 
 
 
-pin17 = machine.Pin(2)
-speaker = machine.PWM(pin17)
+pin13 = machine.Pin(13)
+speaker = machine.PWM(pin13)
 speaker.duty(0)
 
 t0 = machine.TouchPad(machine.Pin(4))
@@ -13,23 +13,23 @@ t1 = machine.TouchPad(machine.Pin(12))
 t2 = machine.TouchPad(machine.Pin(14))
 t3 = machine.TouchPad(machine.Pin(15))
 
-np = neopixel.NeoPixel(machine.Pin(25), 10, bpp=4)
+np = neopixel.NeoPixel(machine.Pin(25), 10)
 
 current = 0
 thresh = 350
-colors = [(0,0,0,0),(0,0,0,0)]
+colors = [(0,0,0),(0,0,0)]
 
 def stackColor(key):
     global colors
 
     if key == 1:
-        colors.insert(0,(255,0,0,0))
+        colors.insert(0,(255,0,0))
     if key == 2:
-        colors.insert(0,(0,255,0,0))
+        colors.insert(0,(0,255,0))
     if key == 3:
-        colors.insert(0,(0,0,255,0))
+        colors.insert(0,(0,0,255))
     if key == 4:
-        colors.insert(0,(0,0,0,255))
+        colors.insert(0,(0,150,150))
 
     print(colors)
     
