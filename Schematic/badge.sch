@@ -1,7 +1,6 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 4
 LIBS:badge-cache
-LIBS:PKMCS0909E4000-R1
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -16,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP32-WROOM U1
+L badge-rescue:ESP32-WROOM U1
 U 1 1 5AD651A6
 P 8750 4350
 F 0 "U1" H 8050 5600 60  0000 C CNN
@@ -27,7 +26,7 @@ F 3 "" H 8300 4800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED4
+L badge-rescue:WS2812B LED4
 U 1 1 5AD656D3
 P 4450 1300
 F 0 "LED4" H 4450 1100 50  0000 C CNN
@@ -38,7 +37,7 @@ F 3 "" H 4450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED3
+L badge-rescue:WS2812B LED3
 U 1 1 5AD65776
 P 3450 1300
 F 0 "LED3" H 3450 1100 50  0000 C CNN
@@ -49,7 +48,7 @@ F 3 "" H 3450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED2
+L badge-rescue:WS2812B LED2
 U 1 1 5AD6579A
 P 2450 1300
 F 0 "LED2" H 2450 1100 50  0000 C CNN
@@ -60,7 +59,7 @@ F 3 "" H 2450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED1
+L badge-rescue:WS2812B LED1
 U 1 1 5AD657F1
 P 1450 1300
 F 0 "LED1" H 1450 1100 50  0000 C CNN
@@ -71,7 +70,7 @@ F 3 "" H 1450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED10
+L badge-rescue:WS2812B LED10
 U 1 1 5AD65818
 P 10450 1300
 F 0 "LED10" H 10450 1100 50  0000 C CNN
@@ -82,7 +81,7 @@ F 3 "" H 10450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED9
+L badge-rescue:WS2812B LED9
 U 1 1 5AD6583B
 P 9450 1300
 F 0 "LED9" H 9450 1100 50  0000 C CNN
@@ -93,7 +92,7 @@ F 3 "" H 9450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED8
+L badge-rescue:WS2812B LED8
 U 1 1 5AD65860
 P 8450 1300
 F 0 "LED8" H 8450 1100 50  0000 C CNN
@@ -104,7 +103,7 @@ F 3 "" H 8450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED7
+L badge-rescue:WS2812B LED7
 U 1 1 5AD65895
 P 7450 1300
 F 0 "LED7" H 7450 1100 50  0000 C CNN
@@ -115,7 +114,7 @@ F 3 "" H 7450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED6
+L badge-rescue:WS2812B LED6
 U 1 1 5AD658EC
 P 6450 1300
 F 0 "LED6" H 6450 1100 50  0000 C CNN
@@ -126,7 +125,7 @@ F 3 "" H 6450 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WS2812B LED5
+L badge-rescue:WS2812B LED5
 U 1 1 5AD6592D
 P 5450 1300
 F 0 "LED5" H 5450 1100 50  0000 C CNN
@@ -191,9 +190,9 @@ Wire Wire Line
 Wire Wire Line
 	9950 1400 10050 1400
 Wire Wire Line
-	850  1100 10950 1100
+	850  1100 1050 1100
 $Comp
-L VDD #PWR01
+L power:VDD #PWR01
 U 1 1 5AD66931
 P 850 1100
 F 0 "#PWR01" H 850 950 50  0001 C CNN
@@ -219,9 +218,9 @@ Wire Wire Line
 	5050 1300 5050 1100
 Connection ~ 5050 1100
 Wire Wire Line
-	850  1600 10950 1600
+	850  1600 900  1600
 $Comp
-L VSS #PWR02
+L power:VSS #PWR02
 U 1 1 5AD66AAC
 P 850 1600
 F 0 "#PWR02" H 850 1450 50  0001 C CNN
@@ -253,7 +252,7 @@ Wire Wire Line
 	6050 1300 6050 1100
 Connection ~ 6050 1100
 $Comp
-L C C1
+L badge-rescue:C C1
 U 1 1 5AD66D2E
 P 900 1450
 F 0 "C1" H 925 1550 50  0000 L CNN
@@ -266,7 +265,7 @@ $EndComp
 Wire Wire Line
 	900  1300 1050 1300
 $Comp
-L C C2
+L badge-rescue:C C2
 U 1 1 5AD66DB2
 P 2000 1450
 F 0 "C2" H 2000 1250 50  0000 L CNN
@@ -279,7 +278,7 @@ $EndComp
 Wire Wire Line
 	2000 1300 2050 1300
 $Comp
-L C C3
+L badge-rescue:C C3
 U 1 1 5AD66F1D
 P 3000 1450
 F 0 "C3" H 3000 1250 50  0000 L CNN
@@ -292,7 +291,7 @@ $EndComp
 Wire Wire Line
 	3000 1300 3050 1300
 $Comp
-L C C4
+L badge-rescue:C C4
 U 1 1 5AD66F97
 P 4000 1450
 F 0 "C4" H 4000 1250 50  0000 L CNN
@@ -305,7 +304,7 @@ $EndComp
 Wire Wire Line
 	4000 1300 4050 1300
 $Comp
-L C C5
+L badge-rescue:C C5
 U 1 1 5AD67015
 P 5000 1450
 F 0 "C5" H 5000 1250 50  0000 L CNN
@@ -318,7 +317,7 @@ $EndComp
 Wire Wire Line
 	5000 1300 5050 1300
 $Comp
-L C C6
+L badge-rescue:C C6
 U 1 1 5AD6716D
 P 6000 1450
 F 0 "C6" H 6000 1250 50  0000 L CNN
@@ -331,7 +330,7 @@ $EndComp
 Wire Wire Line
 	6000 1300 6050 1300
 $Comp
-L C C7
+L badge-rescue:C C7
 U 1 1 5AD671F9
 P 7000 1450
 F 0 "C7" H 7000 1250 50  0000 L CNN
@@ -350,7 +349,7 @@ Wire Wire Line
 	7850 1400 7850 1600
 Connection ~ 7850 1600
 $Comp
-L C C8
+L badge-rescue:C C8
 U 1 1 5AD673B1
 P 8000 1450
 F 0 "C8" H 8000 1250 50  0000 L CNN
@@ -369,7 +368,7 @@ Wire Wire Line
 	8850 1400 8850 1600
 Connection ~ 8850 1600
 $Comp
-L C C9
+L badge-rescue:C C9
 U 1 1 5AD675E4
 P 9000 1450
 F 0 "C9" H 9000 1250 50  0000 L CNN
@@ -383,7 +382,7 @@ Wire Wire Line
 	9850 1400 9850 1600
 Connection ~ 9850 1600
 $Comp
-L C C10
+L badge-rescue:C C10
 U 1 1 5AD6773F
 P 10000 1450
 F 0 "C10" H 10000 1250 50  0000 L CNN
@@ -410,26 +409,25 @@ Wire Wire Line
 Text GLabel 7600 4550 0    60   Input ~ 0
 SPI
 $Comp
-L Battery_Cell BT1
+L badge-rescue:Battery_Cell BT1
 U 1 1 5AD687D0
-P 1750 6300
-F 0 "BT1" H 1850 6400 50  0000 L CNN
-F 1 "Battery_Cell" H 1850 6300 50  0000 L CNN
-F 2 "Battery_Holders:Keystone_3009_1x2450-CoinCell" V 1750 6360 50  0001 C CNN
-F 3 "" V 1750 6360 50  0001 C CNN
-	1    1750 6300
+P 1200 7350
+F 0 "BT1" H 1300 7450 50  0000 L CNN
+F 1 "Battery_Cell" H 1300 7350 50  0000 L CNN
+F 2 "Battery_Holders:Keystone_3009_1x2450-CoinCell" V 1200 7410 50  0001 C CNN
+F 3 "" V 1200 7410 50  0001 C CNN
+	1    1200 7350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1650 6150
 $Comp
-L PWR_FLAG #FLG03
+L power:PWR_FLAG #FLG03
 U 1 1 5AD68B6D
-P 1750 6100
-F 0 "#FLG03" H 1750 6175 50  0001 C CNN
-F 1 "PWR_FLAG" H 1750 6250 50  0000 C CNN
-F 2 "" H 1750 6100 50  0001 C CNN
-F 3 "" H 1750 6100 50  0001 C CNN
-	1    1750 6100
+P 1200 7150
+F 0 "#FLG03" H 1200 7225 50  0001 C CNN
+F 1 "PWR_FLAG" H 1200 7300 50  0000 C CNN
+F 2 "" H 1200 7150 50  0001 C CNN
+F 3 "" H 1200 7150 50  0001 C CNN
+	1    1200 7150
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -439,15 +437,15 @@ Wire Wire Line
 Wire Wire Line
 	9800 4900 9800 5000
 Wire Wire Line
-	9650 5000 9900 5000
+	9650 5000 9800 5000
 Wire Wire Line
 	8300 5400 8300 5500
 Wire Wire Line
 	7800 3750 7550 3750
 Wire Wire Line
-	7550 3750 7550 3350
+	7550 3750 7550 3650
 $Comp
-L VDD #PWR04
+L power:VDD #PWR04
 U 1 1 5AD69713
 P 7550 3350
 F 0 "#PWR04" H 7550 3200 50  0001 C CNN
@@ -461,7 +459,7 @@ Wire Wire Line
 	7550 3400 7450 3400
 Connection ~ 7550 3400
 $Comp
-L C C13
+L badge-rescue:C C13
 U 1 1 5AD697D9
 P 7300 3400
 F 0 "C13" H 7325 3500 50  0000 L CNN
@@ -475,7 +473,7 @@ Wire Wire Line
 	7550 3650 7450 3650
 Connection ~ 7550 3650
 $Comp
-L C C12
+L badge-rescue:C C12
 U 1 1 5AD698A2
 P 7300 3650
 F 0 "C12" H 7325 3750 50  0000 L CNN
@@ -488,14 +486,14 @@ $EndComp
 Wire Wire Line
 	7150 3400 7050 3400
 Wire Wire Line
-	7050 3400 7050 3650
+	7050 3400 7050 3500
 Wire Wire Line
 	7050 3650 7150 3650
 Wire Wire Line
 	7050 3500 6950 3500
 Connection ~ 7050 3500
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 5AD69A65
 P 6950 3500
 F 0 "#PWR05" H 6950 3250 50  0001 C CNN
@@ -506,11 +504,11 @@ F 3 "" H 6950 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6400 3850 7800 3850
+	6400 3850 6650 3850
 Wire Wire Line
 	6650 3850 6650 3700
 $Comp
-L R R1
+L badge-rescue:R R1
 U 1 1 5AD69D2D
 P 6650 3550
 F 0 "R1" V 6550 3550 50  0000 C CNN
@@ -523,7 +521,7 @@ $EndComp
 Wire Wire Line
 	6650 3400 6650 3300
 $Comp
-L VDD #PWR06
+L power:VDD #PWR06
 U 1 1 5AD69EC1
 P 6650 3300
 F 0 "#PWR06" H 6650 3150 50  0001 C CNN
@@ -535,7 +533,7 @@ F 3 "" H 6650 3300 50  0001 C CNN
 $EndComp
 Connection ~ 6650 3850
 $Comp
-L C C11
+L badge-rescue:C C11
 U 1 1 5AD69FF2
 P 6250 3850
 F 0 "C11" H 6275 3950 50  0000 L CNN
@@ -571,26 +569,12 @@ Text GLabel 9650 4700 2    60   Input ~ 0
 P0
 Text GLabel 9650 4800 2    60   Input ~ 0
 IO0
-Text GLabel 7800 4950 0    60   Input ~ 0
-P1
-Text GLabel 7800 4850 0    60   Input ~ 0
-P2
 Text GLabel 9100 5400 3    60   Input ~ 0
+P1
+Text GLabel 7800 4950 0    60   Input ~ 0
+P2
+Text GLabel 7800 4850 0    60   Input ~ 0
 P3
-Text GLabel 9200 5400 3    60   Input ~ 0
-IO2
-Text GLabel 9000 5400 3    60   Input ~ 0
-SD1
-Text GLabel 8900 5400 3    60   Input ~ 0
-SD0
-Text GLabel 8800 5400 3    60   Input ~ 0
-CLK
-Text GLabel 8700 5400 3    60   Input ~ 0
-CMD
-Text GLabel 8600 5400 3    60   Input ~ 0
-SD3
-Text GLabel 8500 5400 3    60   Input ~ 0
-SD2
 Text GLabel 8400 5400 3    60   Input ~ 0
 IO13
 Text GLabel 7800 4150 0    60   Input ~ 0
@@ -601,16 +585,10 @@ Text GLabel 7800 4350 0    60   Input ~ 0
 IO32
 Text GLabel 7800 4450 0    60   Input ~ 0
 IO33
-Text GLabel 7800 4650 0    60   Input ~ 0
-IO26
 Text GLabel 7800 4750 0    60   Input ~ 0
 IO27
-Text GLabel 7800 4050 0    60   Input ~ 0
-VN
-Text GLabel 7800 3950 0    60   Input ~ 0
-VP
 $Comp
-L Conn_01x02 J4
+L badge-rescue:Conn_01x02 J4
 U 1 1 5AD6B1DD
 P 2100 2650
 F 0 "J4" H 2100 2750 50  0000 C CNN
@@ -633,7 +611,7 @@ IO32
 Text GLabel 1350 3250 2    60   Input ~ 0
 IO33
 $Comp
-L Conn_01x04 J1
+L badge-rescue:Conn_01x04 J1
 U 1 1 5AD7CE57
 P 1150 3150
 F 0 "J1" H 1150 3350 50  0000 C CNN
@@ -644,50 +622,7 @@ F 3 "" H 1150 3150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x02 J2
-U 1 1 5AD7CF1C
-P 1150 3650
-F 0 "J2" H 1150 3750 50  0000 C CNN
-F 1 "Left3" H 1150 3450 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 1150 3650 50  0001 C CNN
-F 3 "" H 1150 3650 50  0001 C CNN
-	1    1150 3650
-	-1   0    0    1   
-$EndComp
-Text GLabel 1350 3550 2    60   Input ~ 0
-IO26
-Text GLabel 1350 3650 2    60   Input ~ 0
-IO27
-$Comp
-L Conn_01x09 J3
-U 1 1 5AD7D502
-P 2050 3400
-F 0 "J3" H 2050 3900 50  0000 C CNN
-F 1 "Bottom" H 2050 2900 50  0000 C CNN
-F 2 "" H 2050 3400 50  0001 C CNN
-F 3 "" H 2050 3400 50  0001 C CNN
-	1    2050 3400
-	-1   0    0    1   
-$EndComp
-Text GLabel 2250 3000 2    60   Input ~ 0
-IO13
-Text GLabel 2250 3100 2    60   Input ~ 0
-SD2
-Text GLabel 2250 3200 2    60   Input ~ 0
-SD3
-Text GLabel 2250 3300 2    60   Input ~ 0
-CMD
-Text GLabel 2250 3400 2    60   Input ~ 0
-CLK
-Text GLabel 2250 3500 2    60   Input ~ 0
-SD0
-Text GLabel 2250 3600 2    60   Input ~ 0
-SD1
-NoConn ~ 2250 3700
-Text GLabel 2250 3800 2    60   Input ~ 0
-IO2
-$Comp
-L Conn_01x02 J6
+L badge-rescue:Conn_01x02 J6
 U 1 1 5AD7DC83
 P 2900 2650
 F 0 "J6" H 2900 2750 50  0000 C CNN
@@ -698,7 +633,7 @@ F 3 "" H 2900 2650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x01 J7
+L badge-rescue:Conn_01x01 J7
 U 1 1 5AD7DD02
 P 2900 2950
 F 0 "J7" H 2900 3050 50  0000 C CNN
@@ -725,18 +660,18 @@ IO17
 Text GLabel 3100 3700 2    60   Input ~ 0
 IO16
 $Comp
-L Conn_01x05 J8
+L badge-rescue:Conn_01x05 J8
 U 1 1 5AD7E240
 P 2900 3500
 F 0 "J8" H 2900 3800 50  0000 C CNN
 F 1 "Right3" H 2900 3200 50  0000 C CNN
-F 2 "" H 2900 3500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 2900 3500 50  0001 C CNN
 F 3 "" H 2900 3500 50  0001 C CNN
 	1    2900 3500
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x01 J9
+L badge-rescue:Conn_01x01 J9
 U 1 1 5AD7E2BD
 P 2900 4000
 F 0 "J9" H 2900 4100 50  0000 C CNN
@@ -749,26 +684,26 @@ $EndComp
 Text GLabel 3100 4000 2    60   Input ~ 0
 IO0
 $Comp
-L VSS #PWR07
+L power:VSS #PWR07
 U 1 1 5AD7EECF
-P 1750 6400
-F 0 "#PWR07" H 1750 6250 50  0001 C CNN
-F 1 "VSS" H 1750 6550 50  0000 C CNN
-F 2 "" H 1750 6400 50  0001 C CNN
-F 3 "" H 1750 6400 50  0001 C CNN
-	1    1750 6400
+P 1200 7450
+F 0 "#PWR07" H 1200 7300 50  0001 C CNN
+F 1 "VSS" H 1200 7600 50  0000 C CNN
+F 2 "" H 1200 7450 50  0001 C CNN
+F 3 "" H 1200 7450 50  0001 C CNN
+	1    1200 7450
 	-1   0    0    1   
 $EndComp
 $Comp
-L VDD #PWR08
+L power:VDD #PWR08
 U 1 1 5AD7EF29
-P 1750 6100
-F 0 "#PWR08" H 1750 5950 50  0001 C CNN
-F 1 "VDD" H 1750 6250 50  0000 C CNN
-F 2 "" H 1750 6100 50  0001 C CNN
-F 3 "" H 1750 6100 50  0001 C CNN
-	1    1750 6100
-	1    0    0    -1  
+P 6200 5300
+F 0 "#PWR08" H 6200 5150 50  0001 C CNN
+F 1 "VDD" H 6200 5450 50  0000 C CNN
+F 2 "" H 6200 5300 50  0001 C CNN
+F 3 "" H 6200 5300 50  0001 C CNN
+	1    6200 5300
+	0    1    1    0   
 $EndComp
 Connection ~ 7000 1600
 Connection ~ 8000 1600
@@ -788,76 +723,59 @@ Wire Wire Line
 Connection ~ 9050 1100
 Connection ~ 9800 5000
 $Comp
-L Conn_01x02 J10
-U 1 1 5AD81EFE
-P 1150 2650
-F 0 "J10" H 1150 2750 50  0000 C CNN
-F 1 "Left1" H 1150 2450 50  0000 C CNN
-F 2 "Connectors:GS2" H 1150 2650 50  0001 C CNN
-F 3 "" H 1150 2650 50  0001 C CNN
-	1    1150 2650
-	-1   0    0    1   
-$EndComp
-Text GLabel 1350 2550 2    60   Input ~ 0
-VP
-Text GLabel 1350 2650 2    60   Input ~ 0
-VN
-Connection ~ 4850 1400
-Connection ~ 1750 6400
-$Comp
-L Conn_01x01 J13
+L badge-rescue:Conn_01x01 J13
 U 1 1 5AF8C2A5
-P 1200 4950
-F 0 "J13" H 1200 5050 50  0000 C CNN
-F 1 "Penny0" H 1200 4850 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 1200 4950 50  0001 C CNN
-F 3 "" H 1200 4950 50  0001 C CNN
-	1    1200 4950
+P 950 6000
+F 0 "J13" H 950 6100 50  0000 C CNN
+F 1 "Penny0" H 950 5900 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 950 6000 50  0001 C CNN
+F 3 "" H 950 6000 50  0001 C CNN
+	1    950  6000
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x01 J12
+L badge-rescue:Conn_01x01 J12
 U 1 1 5AF8C41B
-P 1200 4650
-F 0 "J12" H 1200 4750 50  0000 C CNN
-F 1 "Penny1" H 1200 4550 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 1200 4650 50  0001 C CNN
-F 3 "" H 1200 4650 50  0001 C CNN
-	1    1200 4650
+P 950 5700
+F 0 "J12" H 950 5800 50  0000 C CNN
+F 1 "Penny1" H 950 5600 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 950 5700 50  0001 C CNN
+F 3 "" H 950 5700 50  0001 C CNN
+	1    950  5700
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x01 J5
+L badge-rescue:Conn_01x01 J5
 U 1 1 5AF8C77A
-P 1200 4050
-F 0 "J5" H 1200 4150 50  0000 C CNN
-F 1 "Penny3" H 1200 3950 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 1200 4050 50  0001 C CNN
-F 3 "" H 1200 4050 50  0001 C CNN
-	1    1200 4050
+P 950 5100
+F 0 "J5" H 950 5200 50  0000 C CNN
+F 1 "Penny3" H 950 5000 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 950 5100 50  0001 C CNN
+F 3 "" H 950 5100 50  0001 C CNN
+	1    950  5100
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x01 J11
+L badge-rescue:Conn_01x01 J11
 U 1 1 5AF8C780
-P 1200 4350
-F 0 "J11" H 1200 4450 50  0000 C CNN
-F 1 "Penny2" H 1200 4250 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 1200 4350 50  0001 C CNN
-F 3 "" H 1200 4350 50  0001 C CNN
-	1    1200 4350
+P 950 5400
+F 0 "J11" H 950 5500 50  0000 C CNN
+F 1 "Penny2" H 950 5300 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 950 5400 50  0001 C CNN
+F 3 "" H 950 5400 50  0001 C CNN
+	1    950  5400
 	-1   0    0    1   
 $EndComp
-Text GLabel 1400 4050 2    60   Input ~ 0
+Text GLabel 1150 5100 2    60   Input ~ 0
 P3
-Text GLabel 1400 4350 2    60   Input ~ 0
+Text GLabel 1150 5400 2    60   Input ~ 0
 P2
-Text GLabel 1400 4950 2    60   Input ~ 0
+Text GLabel 1150 6000 2    60   Input ~ 0
 P0
-Text GLabel 1400 4650 2    60   Input ~ 0
+Text GLabel 1150 5700 2    60   Input ~ 0
 P1
 $Comp
-L VSS #PWR09
+L power:VSS #PWR09
 U 1 1 5AF92473
 P 6000 3850
 F 0 "#PWR09" H 6000 3700 50  0001 C CNN
@@ -868,7 +786,7 @@ F 3 "" H 6000 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VSS #PWR010
+L power:VSS #PWR010
 U 1 1 5AF924FD
 P 9900 5000
 F 0 "#PWR010" H 9900 4850 50  0001 C CNN
@@ -879,7 +797,7 @@ F 3 "" H 9900 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VSS #PWR011
+L power:VSS #PWR011
 U 1 1 5AF92587
 P 7650 5050
 F 0 "#PWR011" H 7650 4900 50  0001 C CNN
@@ -890,7 +808,7 @@ F 3 "" H 7650 5050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VSS #PWR012
+L power:VSS #PWR012
 U 1 1 5AF92611
 P 8300 5500
 F 0 "#PWR012" H 8300 5350 50  0001 C CNN
@@ -901,93 +819,525 @@ F 3 "" H 8300 5500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_01x02 J14
+L badge-rescue:Conn_01x02 J14
 U 1 1 5AF927B2
-P 2350 4700
-F 0 "J14" H 2350 4800 50  0000 C CNN
-F 1 "Power" H 2350 4500 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 2350 4700 50  0001 C CNN
-F 3 "" H 2350 4700 50  0001 C CNN
-	1    2350 4700
+P 3900 2650
+F 0 "J14" H 3900 2750 50  0000 C CNN
+F 1 "Power" H 3900 2450 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 3900 2650 50  0001 C CNN
+F 3 "" H 3900 2650 50  0001 C CNN
+	1    3900 2650
 	-1   0    0    1   
 $EndComp
 $Comp
-L VSS #PWR013
+L power:VSS #PWR013
 U 1 1 5AF92923
-P 2550 4600
-F 0 "#PWR013" H 2550 4450 50  0001 C CNN
-F 1 "VSS" H 2550 4750 50  0000 C CNN
-F 2 "" H 2550 4600 50  0001 C CNN
-F 3 "" H 2550 4600 50  0001 C CNN
-	1    2550 4600
-	0    1    1    0   
-$EndComp
-$Comp
-L VDD #PWR014
-U 1 1 5AF92987
-P 2550 4700
-F 0 "#PWR014" H 2550 4550 50  0001 C CNN
-F 1 "VDD" H 2550 4850 50  0000 C CNN
-F 2 "" H 2550 4700 50  0001 C CNN
-F 3 "" H 2550 4700 50  0001 C CNN
-	1    2550 4700
-	0    1    1    0   
-$EndComp
-$Comp
-L Conn_01x02 J15
-U 1 1 5AF92DFF
-P 3200 4600
-F 0 "J15" H 3200 4700 50  0000 C CNN
-F 1 "Right5" H 3200 4400 50  0000 C CNN
-F 2 "Connectors:GS2" H 3200 4600 50  0001 C CNN
-F 3 "" H 3200 4600 50  0001 C CNN
-	1    3200 4600
-	-1   0    0    1   
-$EndComp
-Text GLabel 3400 4500 2    60   Input ~ 0
-IO16
-Text GLabel 3400 4600 2    60   Input ~ 0
-IO17
-$Comp
-L PKMCS0909E4000-R1 LS1
-U 1 1 5AF97E1F
-P 5650 5400
-F 0 "LS1" H 5851 5400 50  0000 L BNN
-F 1 "PKMCS0909E4000-R1" H 5850 5300 50  0000 L BNN
-F 2 "PKMCS0909E4000-R1:XDCR_PKMCS0909E4000-R1" H 5650 5400 50  0001 L BNN
-F 3 "490-9647-1-ND" H 5650 5400 50  0001 L BNN
-F 4 "https://www.digikey.com/product-detail/en/murata-electronics-north-america/PKMCS0909E4000-R1/490-9647-1-ND/4878401?WT.z_cid=ref_snapeda&utm_source=snapeda&utm_medium=aggregator&utm_campaign=buynow" H 5650 5400 50  0001 L BNN "Field4"
-F 5 "PKMCS0909E4000-R1" H 5650 5400 50  0001 L BNN "Field5"
-F 6 "Audio Sounder Piezo Solder Pad Surface Mount" H 5650 5400 50  0001 L BNN "Field6"
-F 7 "Murata" H 5650 5400 50  0001 L BNN "Field7"
-F 8 "2010 Murata" H 5650 5400 50  0001 L BNN "Field8"
-	1    5650 5400
+P 4100 2550
+F 0 "#PWR013" H 4100 2400 50  0001 C CNN
+F 1 "VSS" H 4100 2700 50  0000 C CNN
+F 2 "" H 4100 2550 50  0001 C CNN
+F 3 "" H 4100 2550 50  0001 C CNN
+	1    4100 2550
 	1    0    0    -1  
 $EndComp
-Text GLabel 5650 5000 1    60   Input ~ 0
+$Comp
+L power:VDD #PWR014
+U 1 1 5AF92987
+P 4100 2650
+F 0 "#PWR014" H 4100 2500 50  0001 C CNN
+F 1 "VDD" H 4100 2800 50  0000 C CNN
+F 2 "" H 4100 2650 50  0001 C CNN
+F 3 "" H 4100 2650 50  0001 C CNN
+	1    4100 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:Conn_01x02 J15
+U 1 1 5AF92DFF
+P 3700 3050
+F 0 "J15" H 3700 3150 50  0000 C CNN
+F 1 "Right5" H 3700 2850 50  0000 C CNN
+F 2 "Connectors:GS2" H 3700 3050 50  0001 C CNN
+F 3 "" H 3700 3050 50  0001 C CNN
+	1    3700 3050
+	-1   0    0    1   
+$EndComp
+Text GLabel 3900 2950 2    60   Input ~ 0
+IO16
+Text GLabel 3900 3050 2    60   Input ~ 0
+IO17
+$Comp
+L badge-rescue:PKMCS0909E4000-R1 LS1
+U 1 1 5AF97E1F
+P 5700 6800
+F 0 "LS1" H 5901 6800 50  0000 L BNN
+F 1 "PKMCS0909E4000-R1" H 5900 6700 50  0000 L BNN
+F 2 "PKMCS0909E4000-R1:XDCR_PKMCS0909E4000-R1" H 5700 6800 50  0001 L BNN
+F 3 "490-9647-1-ND" H 5700 6800 50  0001 L BNN
+F 4 "https://www.digikey.com/product-detail/en/murata-electronics-north-america/PKMCS0909E4000-R1/490-9647-1-ND/4878401?WT.z_cid=ref_snapeda&utm_source=snapeda&utm_medium=aggregator&utm_campaign=buynow" H 5700 6800 50  0001 L BNN "Field4"
+F 5 "PKMCS0909E4000-R1" H 5700 6800 50  0001 L BNN "Field5"
+F 6 "Audio Sounder Piezo Solder Pad Surface Mount" H 5700 6800 50  0001 L BNN "Field6"
+F 7 "Murata" H 5700 6800 50  0001 L BNN "Field7"
+F 8 "2010 Murata" H 5700 6800 50  0001 L BNN "Field8"
+	1    5700 6800
+	1    0    0    -1  
+$EndComp
+Text GLabel 5700 6400 1    60   Input ~ 0
 IO13
 $Comp
-L VSS #PWR015
+L power:VSS #PWR015
 U 1 1 5AF98024
-P 5650 5800
-F 0 "#PWR015" H 5650 5650 50  0001 C CNN
-F 1 "VSS" H 5650 5950 50  0000 C CNN
-F 2 "" H 5650 5800 50  0001 C CNN
-F 3 "" H 5650 5800 50  0001 C CNN
-	1    5650 5800
+P 5700 7200
+F 0 "#PWR015" H 5700 7050 50  0001 C CNN
+F 1 "VSS" H 5700 7350 50  0000 C CNN
+F 2 "" H 5700 7200 50  0001 C CNN
+F 3 "" H 5700 7200 50  0001 C CNN
+	1    5700 7200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1050 1100 2050 1100
+Wire Wire Line
+	2050 1100 3050 1100
+Wire Wire Line
+	3050 1100 4050 1100
+Wire Wire Line
+	4050 1100 5050 1100
+Wire Wire Line
+	5050 1100 6050 1100
+Wire Wire Line
+	1850 1600 2000 1600
+Wire Wire Line
+	2850 1600 3000 1600
+Wire Wire Line
+	3850 1600 4000 1600
+Wire Wire Line
+	4850 1600 5000 1600
+Wire Wire Line
+	5850 1600 6000 1600
+Wire Wire Line
+	6850 1600 7000 1600
+Wire Wire Line
+	6050 1100 7050 1100
+Wire Wire Line
+	7050 1100 8050 1100
+Wire Wire Line
+	7850 1600 8000 1600
+Wire Wire Line
+	8050 1100 9050 1100
+Wire Wire Line
+	8850 1600 9000 1600
+Wire Wire Line
+	9850 1600 10000 1600
+Wire Wire Line
+	10050 1100 10950 1100
+Wire Wire Line
+	10850 1600 10950 1600
+Wire Wire Line
+	7550 3400 7550 3350
+Wire Wire Line
+	7550 3650 7550 3400
+Wire Wire Line
+	7050 3500 7050 3650
+Wire Wire Line
+	6650 3850 7800 3850
+Wire Wire Line
+	7000 1600 7850 1600
+Wire Wire Line
+	8000 1600 8850 1600
+Wire Wire Line
+	9000 1600 9850 1600
+Wire Wire Line
+	10000 1600 10850 1600
+Wire Wire Line
+	900  1600 1850 1600
+Wire Wire Line
+	2000 1600 2850 1600
+Wire Wire Line
+	3000 1600 3850 1600
+Wire Wire Line
+	4000 1600 4850 1600
+Wire Wire Line
+	5000 1600 5850 1600
+Wire Wire Line
+	6000 1600 6850 1600
+Wire Wire Line
+	9050 1100 10050 1100
+Wire Wire Line
+	9800 5000 9900 5000
+$Comp
+L power:VSS #PWR0101
+U 1 1 5C308A20
+P 9200 5400
+F 0 "#PWR0101" H 9200 5250 50  0001 C CNN
+F 1 "VSS" H 9218 5573 50  0000 C CNN
+F 2 "" H 9200 5400 50  0001 C CNN
+F 3 "" H 9200 5400 50  0001 C CNN
+	1    9200 5400
+	-1   0    0    1   
+$EndComp
+Connection ~ 1200 7150
+$Comp
+L Connector:USB_B_Micro J10
+U 1 1 5C32AACC
+P 2250 5400
+F 0 "J10" H 2305 5867 50  0000 C CNN
+F 1 "USB_B_Micro" H 2305 5776 50  0000 C CNN
+F 2 "Connectors_USB:USB_Micro-B_Molex_47346-0001" H 2400 5350 50  0001 C CNN
+F 3 "~" H 2400 5350 50  0001 C CNN
+	1    2250 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TLV1117-33 U4
+U 1 1 5C32AD7A
+P 5700 5300
+F 0 "U4" H 5700 5542 50  0000 C CNN
+F 1 "TLV1117-33" H 5700 5451 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 5700 5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 5700 5300 50  0001 C CNN
+	1    5700 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR03
+U 1 1 5C32B42E
+P 1200 7150
+F 0 "#PWR03" H 1200 7000 50  0001 C CNN
+F 1 "VDDA" H 1217 7323 50  0000 C CNN
+F 2 "" H 1200 7150 50  0001 C CNN
+F 3 "" H 1200 7150 50  0001 C CNN
+	1    1200 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR023
+U 1 1 5C32B6D7
+P 5200 5300
+F 0 "#PWR023" H 5200 5150 50  0001 C CNN
+F 1 "VDDA" V 5218 5428 50  0000 L CNN
+F 2 "" H 5200 5300 50  0001 C CNN
+F 3 "" H 5200 5300 50  0001 C CNN
+	1    5200 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 5300 6100 5300
+Wire Wire Line
+	5400 5300 5300 5300
+$Comp
+L badge-rescue:C C16
+U 1 1 5C332E52
+P 5300 5450
+F 0 "C16" H 5415 5496 50  0000 L CNN
+F 1 "1uF" H 5415 5405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5338 5300 50  0001 C CNN
+F 3 "" H 5300 5450 50  0001 C CNN
+	1    5300 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 5300 5300
+Wire Wire Line
+	5300 5300 5200 5300
+$Comp
+L badge-rescue:C C18
+U 1 1 5C332F0A
+P 6100 5450
+F 0 "C18" H 6215 5496 50  0000 L CNN
+F 1 "1uF" H 6215 5405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6138 5300 50  0001 C CNN
+F 3 "" H 6100 5450 50  0001 C CNN
+	1    6100 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 6100 5300
+Wire Wire Line
+	6100 5300 6200 5300
+$Comp
+L power:VSS #PWR029
+U 1 1 5C333035
+P 6100 5600
+F 0 "#PWR029" H 6100 5450 50  0001 C CNN
+F 1 "VSS" H 6118 5773 50  0000 C CNN
+F 2 "" H 6100 5600 50  0001 C CNN
+F 3 "" H 6100 5600 50  0001 C CNN
+	1    6100 5600
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR016
-U 1 1 5B16A9F1
-P 2700 5450
-F 0 "#PWR016" H 2700 5200 50  0001 C CNN
-F 1 "GND" H 2700 5300 50  0000 C CNN
-F 2 "" H 2700 5450 50  0001 C CNN
-F 3 "" H 2700 5450 50  0001 C CNN
-	1    2700 5450
+L power:VSS #PWR028
+U 1 1 5C33320E
+P 5700 5600
+F 0 "#PWR028" H 5700 5450 50  0001 C CNN
+F 1 "VSS" H 5718 5773 50  0000 C CNN
+F 2 "" H 5700 5600 50  0001 C CNN
+F 3 "" H 5700 5600 50  0001 C CNN
+	1    5700 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR024
+U 1 1 5C333311
+P 5300 5600
+F 0 "#PWR024" H 5300 5450 50  0001 C CNN
+F 1 "VSS" H 5318 5773 50  0000 C CNN
+F 2 "" H 5300 5600 50  0001 C CNN
+F 3 "" H 5300 5600 50  0001 C CNN
+	1    5300 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U3
+U 1 1 5C33362C
+P 3550 5350
+F 0 "U3" H 3550 5800 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 3650 5700 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3600 5100 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 3400 5300 50  0001 C CNN
+	1    3550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR027
+U 1 1 5C33B5E7
+P 4400 5250
+F 0 "#PWR027" H 4400 5100 50  0001 C CNN
+F 1 "VDDA" V 4417 5378 50  0000 L CNN
+F 2 "" H 4400 5250 50  0001 C CNN
+F 3 "" H 4400 5250 50  0001 C CNN
+	1    4400 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:C C17
+U 1 1 5C33B6A8
+P 4150 5100
+F 0 "C17" H 4265 5146 50  0000 L CNN
+F 1 "4.7uF" H 4265 5055 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4188 4950 50  0001 C CNN
+F 3 "" H 4150 5100 50  0001 C CNN
+	1    4150 5100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4150 5250
+Wire Wire Line
+	4150 5250 4400 5250
+Wire Wire Line
+	3950 5250 4150 5250
+$Comp
+L power:VSS #PWR025
+U 1 1 5C33F9EB
+P 4150 4950
+F 0 "#PWR025" H 4150 4800 50  0001 C CNN
+F 1 "VSS" H 4167 5123 50  0000 C CNN
+F 2 "" H 4150 4950 50  0001 C CNN
+F 3 "" H 4150 4950 50  0001 C CNN
+	1    4150 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR021
+U 1 1 5C33FAD9
+P 3550 5650
+F 0 "#PWR021" H 3550 5500 50  0001 C CNN
+F 1 "VSS" H 3568 5823 50  0000 C CNN
+F 2 "" H 3550 5650 50  0001 C CNN
+F 3 "" H 3550 5650 50  0001 C CNN
+	1    3550 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 5050 2800 5200
+Wire Wire Line
+	2800 5200 2550 5200
+Wire Wire Line
+	2800 5050 2900 5050
+$Comp
+L badge-rescue:C C14
+U 1 1 5C344660
+P 2900 4900
+F 0 "C14" H 3015 4946 50  0000 L CNN
+F 1 "4.7uF" H 3015 4855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2938 4750 50  0001 C CNN
+F 3 "" H 2900 4900 50  0001 C CNN
+	1    2900 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2900 5050
+Wire Wire Line
+	2900 5050 3050 5050
+$Comp
+L power:VSS #PWR019
+U 1 1 5C34477D
+P 2900 4750
+F 0 "#PWR019" H 2900 4600 50  0001 C CNN
+F 1 "VSS" H 2917 4923 50  0000 C CNN
+F 2 "" H 2900 4750 50  0001 C CNN
+F 3 "" H 2900 4750 50  0001 C CNN
+	1    2900 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR017
+U 1 1 5C34482F
+P 2250 5800
+F 0 "#PWR017" H 2250 5650 50  0001 C CNN
+F 1 "VSS" H 2268 5973 50  0000 C CNN
+F 2 "" H 2250 5800 50  0001 C CNN
+F 3 "" H 2250 5800 50  0001 C CNN
+	1    2250 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR016
+U 1 1 5C344941
+P 2150 5800
+F 0 "#PWR016" H 2150 5650 50  0001 C CNN
+F 1 "VSS" H 2168 5973 50  0000 C CNN
+F 2 "" H 2150 5800 50  0001 C CNN
+F 3 "" H 2150 5800 50  0001 C CNN
+	1    2150 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L CH330-cache:otter_CH330 U2
+U 1 1 5C344C72
+P 3250 6150
+F 0 "U2" H 3250 6525 50  0000 C CNN
+F 1 "otter_CH330" H 3250 6434 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8-1EP_3.9x4.9mm_Pitch1.27mm" H 3100 6150 50  0001 C CNN
+F 3 "" H 3100 6150 50  0001 C CNN
+	1    3250 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 5400 2750 5400
+Wire Wire Line
+	2750 5400 2750 6000
+Wire Wire Line
+	2750 6000 2850 6000
+Wire Wire Line
+	2550 5500 2700 5500
+Wire Wire Line
+	2700 5500 2700 6100
+Wire Wire Line
+	2700 6100 2850 6100
+$Comp
+L power:VSS #PWR018
+U 1 1 5C34EA23
+P 2850 6200
+F 0 "#PWR018" H 2850 6050 50  0001 C CNN
+F 1 "VSS" V 2868 6328 50  0000 L CNN
+F 2 "" H 2850 6200 50  0001 C CNN
+F 3 "" H 2850 6200 50  0001 C CNN
+	1    2850 6200
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2700 5450 0    60   Input ~ 0
-IO2
+Text GLabel 3650 6100 2    50   Input ~ 0
+RX
+Text GLabel 3650 6200 2    50   Input ~ 0
+TX
+$Comp
+L power:VBUS #PWR020
+U 1 1 5C34F2AC
+P 3050 5050
+F 0 "#PWR020" H 3050 4900 50  0001 C CNN
+F 1 "VBUS" H 3065 5223 50  0000 C CNN
+F 2 "" H 3050 5050 50  0001 C CNN
+F 3 "" H 3050 5050 50  0001 C CNN
+	1    3050 5050
+	-1   0    0    1   
+$EndComp
+Connection ~ 3050 5050
+Wire Wire Line
+	3050 5050 3550 5050
+$Comp
+L power:VBUS #PWR022
+U 1 1 5C34F427
+P 3650 6300
+F 0 "#PWR022" H 3650 6150 50  0001 C CNN
+F 1 "VBUS" H 3665 6473 50  0000 C CNN
+F 2 "" H 3650 6300 50  0001 C CNN
+F 3 "" H 3650 6300 50  0001 C CNN
+	1    3650 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 6000 3850 6000
+$Comp
+L badge-rescue:C C15
+U 1 1 5C354B29
+P 4000 6000
+F 0 "C15" V 4252 6000 50  0000 C CNN
+F 1 "0.1uF" V 4161 6000 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4038 5850 50  0001 C CNN
+F 3 "" H 4000 6000 50  0001 C CNN
+	1    4000 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR026
+U 1 1 5C354D9E
+P 4150 6000
+F 0 "#PWR026" H 4150 5850 50  0001 C CNN
+F 1 "VSS" V 4167 6128 50  0000 L CNN
+F 2 "" H 4150 6000 50  0001 C CNN
+F 3 "" H 4150 6000 50  0001 C CNN
+	1    4150 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:C C19
+U 1 1 5C354F6F
+P 4000 6300
+F 0 "C19" V 3748 6300 50  0000 C CNN
+F 1 "0.1uF" V 3839 6300 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4038 6150 50  0001 C CNN
+F 3 "" H 4000 6300 50  0001 C CNN
+	1    4000 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 6300 3850 6300
+Connection ~ 3650 6300
+Wire Wire Line
+	4150 6300 4150 6000
+Connection ~ 4150 6000
+NoConn ~ 2850 6300
+Text Notes 4150 5950 0    50   ~ 0
+Check if is 3v output later\n
+$Comp
+L badge-rescue:R R2
+U 1 1 5C37B5B5
+P 3000 5450
+F 0 "R2" V 3100 5450 50  0000 C CNN
+F 1 "2k" V 3200 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2930 5450 50  0001 C CNN
+F 3 "" H 3000 5450 50  0001 C CNN
+	1    3000 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VSS #PWR030
+U 1 1 5C37B705
+P 2850 5450
+F 0 "#PWR030" H 2850 5300 50  0001 C CNN
+F 1 "VSS" H 2868 5623 50  0000 C CNN
+F 2 "" H 2850 5450 50  0001 C CNN
+F 3 "" H 2850 5450 50  0001 C CNN
+	1    2850 5450
+	-1   0    0    1   
+$EndComp
+Text GLabel 3950 5450 2    50   Input ~ 0
+IO27
+NoConn ~ 2550 5600
+NoConn ~ 8500 5400
+NoConn ~ 8600 5400
+NoConn ~ 8700 5400
+NoConn ~ 8800 5400
+NoConn ~ 8900 5400
+NoConn ~ 9000 5400
+NoConn ~ 7800 3950
+NoConn ~ 7800 4050
+NoConn ~ 7800 4650
 $EndSCHEMATC

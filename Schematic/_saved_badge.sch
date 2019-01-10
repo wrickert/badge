@@ -665,7 +665,7 @@ U 1 1 5AD7E240
 P 2900 3500
 F 0 "J8" H 2900 3800 50  0000 C CNN
 F 1 "Right3" H 2900 3200 50  0000 C CNN
-F 2 "" H 2900 3500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 2900 3500 50  0001 C CNN
 F 3 "" H 2900 3500 50  0001 C CNN
 	1    2900 3500
 	-1   0    0    1   
@@ -882,7 +882,7 @@ F 8 "2010 Murata" H 5700 6800 50  0001 L BNN "Field8"
 	1    5700 6800
 	1    0    0    -1  
 $EndComp
-Text GLabel 5700 6400 1    60   Input ~ 0
+Text GLabel 6000 6400 2    60   Input ~ 0
 IO13
 $Comp
 L power:VSS #PWR015
@@ -1340,4 +1340,48 @@ NoConn ~ 9000 5400
 NoConn ~ 7800 3950
 NoConn ~ 7800 4050
 NoConn ~ 7800 4650
+$Comp
+L badge-rescue:R R3
+U 1 1 5C3808AE
+P 5600 4650
+F 0 "R3" V 5393 4650 50  0000 C CNN
+F 1 "0ohm" V 5484 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5530 4650 50  0001 C CNN
+F 3 "" H 5600 4650 50  0001 C CNN
+	1    5600 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:R R4
+U 1 1 5C3809AF
+P 5850 6400
+F 0 "R4" V 5643 6400 50  0000 C CNN
+F 1 "22ohm" V 5734 6400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5780 6400 50  0001 C CNN
+F 3 "" H 5850 6400 50  0001 C CNN
+	1    5850 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VDDA #PWR031
+U 1 1 5C380B3D
+P 5450 4650
+F 0 "#PWR031" H 5450 4500 50  0001 C CNN
+F 1 "VDDA" V 5468 4778 50  0000 L CNN
+F 2 "" H 5450 4650 50  0001 C CNN
+F 3 "" H 5450 4650 50  0001 C CNN
+	1    5450 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR032
+U 1 1 5C380CD6
+P 5750 4650
+F 0 "#PWR032" H 5750 4500 50  0001 C CNN
+F 1 "VDD" V 5767 4778 50  0000 L CNN
+F 2 "" H 5750 4650 50  0001 C CNN
+F 3 "" H 5750 4650 50  0001 C CNN
+	1    5750 4650
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
