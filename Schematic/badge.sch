@@ -492,17 +492,6 @@ Wire Wire Line
 Wire Wire Line
 	7050 3500 6950 3500
 Connection ~ 7050 3500
-$Comp
-L power:GND #PWR05
-U 1 1 5AD69A65
-P 6950 3500
-F 0 "#PWR05" H 6950 3250 50  0001 C CNN
-F 1 "GND" H 6950 3350 50  0000 C CNN
-F 2 "" H 6950 3500 50  0001 C CNN
-F 3 "" H 6950 3500 50  0001 C CNN
-	1    6950 3500
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6400 3850 6650 3850
 Wire Wire Line
@@ -616,20 +605,9 @@ U 1 1 5AD7CE57
 P 1150 3150
 F 0 "J1" H 1150 3350 50  0000 C CNN
 F 1 "Left2" H 1150 2850 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_4xInline_1mmDrill" H 1150 3150 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 1150 3150 50  0001 C CNN
 F 3 "" H 1150 3150 50  0001 C CNN
 	1    1150 3150
-	-1   0    0    1   
-$EndComp
-$Comp
-L badge-rescue:Conn_01x02 J6
-U 1 1 5AD7DC83
-P 2900 2650
-F 0 "J6" H 2900 2750 50  0000 C CNN
-F 1 "Right1" H 2900 2450 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 2900 2650 50  0001 C CNN
-F 3 "" H 2900 2650 50  0001 C CNN
-	1    2900 2650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -643,10 +621,6 @@ F 3 "" H 2900 2950 50  0001 C CNN
 	1    2900 2950
 	-1   0    0    1   
 $EndComp
-Text GLabel 3100 2550 2    60   Input ~ 0
-IO23
-Text GLabel 3100 2650 2    60   Input ~ 0
-IO22
 Text GLabel 3100 2950 2    60   Input ~ 0
 IO21
 Text GLabel 3100 3300 2    60   Input ~ 0
@@ -851,21 +825,6 @@ F 3 "" H 4100 2650 50  0001 C CNN
 	1    4100 2650
 	0    1    1    0   
 $EndComp
-$Comp
-L badge-rescue:Conn_01x02 J15
-U 1 1 5AF92DFF
-P 3700 3050
-F 0 "J15" H 3700 3150 50  0000 C CNN
-F 1 "Right5" H 3700 2850 50  0000 C CNN
-F 2 "Connectors:GS2" H 3700 3050 50  0001 C CNN
-F 3 "" H 3700 3050 50  0001 C CNN
-	1    3700 3050
-	-1   0    0    1   
-$EndComp
-Text GLabel 3900 2950 2    60   Input ~ 0
-IO16
-Text GLabel 3900 3050 2    60   Input ~ 0
-IO17
 $Comp
 L badge-rescue:PKMCS0909E4000-R1 LS1
 U 1 1 5AF97E1F
@@ -1200,7 +1159,7 @@ F 3 "" H 2150 5800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CH330-cache:otter_CH330 U2
+L badge-rescue:otter_CH330-CH330-cache U2
 U 1 1 5C344C72
 P 3250 6150
 F 0 "U2" H 3250 6525 50  0000 C CNN
@@ -1383,5 +1342,16 @@ F 2 "" H 5750 4650 50  0001 C CNN
 F 3 "" H 5750 4650 50  0001 C CNN
 	1    5750 4650
 	0    1    1    0   
+$EndComp
+$Comp
+L power:VSS #PWR0102
+U 1 1 5C39B3AF
+P 6950 3500
+F 0 "#PWR0102" H 6950 3350 50  0001 C CNN
+F 1 "VSS" V 7000 3500 50  0000 L CNN
+F 2 "" H 6950 3500 50  0001 C CNN
+F 3 "" H 6950 3500 50  0001 C CNN
+	1    6950 3500
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC

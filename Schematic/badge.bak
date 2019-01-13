@@ -616,20 +616,9 @@ U 1 1 5AD7CE57
 P 1150 3150
 F 0 "J1" H 1150 3350 50  0000 C CNN
 F 1 "Left2" H 1150 2850 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_4xInline_1mmDrill" H 1150 3150 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 1150 3150 50  0001 C CNN
 F 3 "" H 1150 3150 50  0001 C CNN
 	1    1150 3150
-	-1   0    0    1   
-$EndComp
-$Comp
-L badge-rescue:Conn_01x02 J6
-U 1 1 5AD7DC83
-P 2900 2650
-F 0 "J6" H 2900 2750 50  0000 C CNN
-F 1 "Right1" H 2900 2450 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 2900 2650 50  0001 C CNN
-F 3 "" H 2900 2650 50  0001 C CNN
-	1    2900 2650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -643,10 +632,6 @@ F 3 "" H 2900 2950 50  0001 C CNN
 	1    2900 2950
 	-1   0    0    1   
 $EndComp
-Text GLabel 3100 2550 2    60   Input ~ 0
-IO23
-Text GLabel 3100 2650 2    60   Input ~ 0
-IO22
 Text GLabel 3100 2950 2    60   Input ~ 0
 IO21
 Text GLabel 3100 3300 2    60   Input ~ 0
@@ -882,7 +867,7 @@ F 8 "2010 Murata" H 5700 6800 50  0001 L BNN "Field8"
 	1    5700 6800
 	1    0    0    -1  
 $EndComp
-Text GLabel 5700 6400 1    60   Input ~ 0
+Text GLabel 6000 6400 2    60   Input ~ 0
 IO13
 $Comp
 L power:VSS #PWR015
@@ -1200,7 +1185,7 @@ F 3 "" H 2150 5800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CH330-cache:otter_CH330 U2
+L badge-rescue:otter_CH330-CH330-cache U2
 U 1 1 5C344C72
 P 3250 6150
 F 0 "U2" H 3250 6525 50  0000 C CNN
@@ -1340,4 +1325,48 @@ NoConn ~ 9000 5400
 NoConn ~ 7800 3950
 NoConn ~ 7800 4050
 NoConn ~ 7800 4650
+$Comp
+L badge-rescue:R R3
+U 1 1 5C3808AE
+P 5600 4650
+F 0 "R3" V 5393 4650 50  0000 C CNN
+F 1 "0ohm" V 5484 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5530 4650 50  0001 C CNN
+F 3 "" H 5600 4650 50  0001 C CNN
+	1    5600 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L badge-rescue:R R4
+U 1 1 5C3809AF
+P 5850 6400
+F 0 "R4" V 5643 6400 50  0000 C CNN
+F 1 "22ohm" V 5734 6400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5780 6400 50  0001 C CNN
+F 3 "" H 5850 6400 50  0001 C CNN
+	1    5850 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VDDA #PWR031
+U 1 1 5C380B3D
+P 5450 4650
+F 0 "#PWR031" H 5450 4500 50  0001 C CNN
+F 1 "VDDA" V 5468 4778 50  0000 L CNN
+F 2 "" H 5450 4650 50  0001 C CNN
+F 3 "" H 5450 4650 50  0001 C CNN
+	1    5450 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR032
+U 1 1 5C380CD6
+P 5750 4650
+F 0 "#PWR032" H 5750 4500 50  0001 C CNN
+F 1 "VDD" V 5767 4778 50  0000 L CNN
+F 2 "" H 5750 4650 50  0001 C CNN
+F 3 "" H 5750 4650 50  0001 C CNN
+	1    5750 4650
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
