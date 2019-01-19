@@ -1,8 +1,8 @@
 Id,Designator,Package,Quantity,Designation,Price per part,Total per board,Link and Ref
 1,U2,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,otter_CH330,0.3163,0.3163,https://lcsc.com/product-detail/USB_CH330N_C108996.html
-2,"0101,0001,0100,1000,1100,0010,1010,0110,1110,1001",WS2812B-Sunken,10,WS2812B,0.045,0.45,
-3,U1,ESP32-WROOM,1,ESP32-WROOM,3.7,3.7,
-4,BT1,Keystone_3009_1x2450-CoinCell,1,Battery_Cell,0.45,0.45,
+2,"0101,0001,0100,1000,1100,0010,1010,0110,1110,1001",WS2812B-Sunken,10,WS2812B,0.045,0.45,alibaba
+3,U1,ESP32-WROOM,1,ESP32-WROOM,3.7,3.7,alibaba
+4,BT1,Keystone_3009_1x2450-CoinCell,1,Battery_Cell,0.45,0.45,alibaba
 5,"C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C15,C19",C_0805_HandSoldering,14,0.1uF,0.00828,0.11592,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21F104ZBCNNNC/1276-1007-2-ND/3886665
 6,C13,C_0805_HandSoldering,1,10uF,0.0259,0.0259,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21A106KQCLRNC/1276-2405-1-ND/3890491
 7,R1,R_0805_HandSoldering,1,10k,0.0075,0.0075,https://www.digikey.com/product-detail/en/bourns-inc/CR0805-JW-103ELF/CR0805-JW-103ELFCT-ND/3592918
