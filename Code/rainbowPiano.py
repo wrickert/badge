@@ -3,9 +3,9 @@ import time
 import neopixel
 
 
-
-pin17 = machine.Pin(17)
-speaker = machine.PWM(pin17)
+#TODO fix this
+pin13 = machine.Pin(13)
+speaker = machine.PWM(pin13)
 speaker.duty(0)
 
 t0 = machine.TouchPad(machine.Pin(4))
@@ -35,7 +35,7 @@ def stackColor(key):
     
     size = len(colors)
     if size > 10:
-        size = 10
+boot        size = 10
         colors.pop()
 
     for i in range(0, size): 

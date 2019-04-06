@@ -396,13 +396,9 @@ Wire Wire Line
 	10000 1300 10050 1300
 Wire Wire Line
 	10050 1300 10050 1100
-Connection ~ 10050 1100
 Wire Wire Line
 	10850 1400 10850 1600
-Connection ~ 10850 1600
-Wire Wire Line
-	1050 1400 1050 1800
-Text GLabel 1050 1800 3    60   Input ~ 0
+Text GLabel 10950 1850 3    60   Input ~ 0
 SPI
 Wire Wire Line
 	7800 4550 7600 4550
@@ -575,83 +571,83 @@ IO27
 $Comp
 L badge-rescue:Conn_01x02 J4
 U 1 1 5AD6B1DD
-P 2100 2650
-F 0 "J4" H 2100 2750 50  0000 C CNN
-F 1 "Serial" H 2100 2450 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 2100 2650 50  0001 C CNN
-F 3 "" H 2100 2650 50  0001 C CNN
-	1    2100 2650
+P 1100 4450
+F 0 "J4" H 1100 4550 50  0000 C CNN
+F 1 "Serial" H 1100 4250 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 1100 4450 50  0001 C CNN
+F 3 "" H 1100 4450 50  0001 C CNN
+	1    1100 4450
 	-1   0    0    1   
 $EndComp
-Text GLabel 2300 2550 2    60   Input ~ 0
+Text GLabel 1300 4350 2    60   Input ~ 0
 TX
-Text GLabel 2300 2650 2    60   Input ~ 0
+Text GLabel 1300 4450 2    60   Input ~ 0
 RX
-Text GLabel 1350 2950 2    60   Input ~ 0
+Text GLabel 1300 2300 2    60   Input ~ 0
 IO34
-Text GLabel 1350 3050 2    60   Input ~ 0
+Text GLabel 1300 2400 2    60   Input ~ 0
 IO35
-Text GLabel 1350 3150 2    60   Input ~ 0
+Text GLabel 1300 2500 2    60   Input ~ 0
 IO32
-Text GLabel 1350 3250 2    60   Input ~ 0
+Text GLabel 1300 2600 2    60   Input ~ 0
 IO33
 $Comp
 L badge-rescue:Conn_01x04 J1
 U 1 1 5AD7CE57
-P 1150 3150
-F 0 "J1" H 1150 3350 50  0000 C CNN
-F 1 "Left2" H 1150 2850 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 1150 3150 50  0001 C CNN
-F 3 "" H 1150 3150 50  0001 C CNN
-	1    1150 3150
+P 1100 2500
+F 0 "J1" H 1100 2700 50  0000 C CNN
+F 1 "Left2" H 1100 2200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 1100 2500 50  0001 C CNN
+F 3 "" H 1100 2500 50  0001 C CNN
+	1    1100 2500
 	-1   0    0    1   
 $EndComp
 $Comp
 L badge-rescue:Conn_01x01 J7
 U 1 1 5AD7DD02
-P 2900 2950
-F 0 "J7" H 2900 3050 50  0000 C CNN
-F 1 "Right2" H 2900 2850 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 2900 2950 50  0001 C CNN
-F 3 "" H 2900 2950 50  0001 C CNN
-	1    2900 2950
+P 1100 3650
+F 0 "J7" H 1100 3750 50  0000 C CNN
+F 1 "Right2" H 1100 3550 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 1100 3650 50  0001 C CNN
+F 3 "" H 1100 3650 50  0001 C CNN
+	1    1100 3650
 	-1   0    0    1   
 $EndComp
-Text GLabel 3100 2950 2    60   Input ~ 0
+Text GLabel 1300 3650 2    60   Input ~ 0
 IO21
-Text GLabel 3100 3300 2    60   Input ~ 0
+Text GLabel 1300 2900 2    60   Input ~ 0
 IO19
-Text GLabel 3100 3400 2    60   Input ~ 0
+Text GLabel 1300 3000 2    60   Input ~ 0
 IO18
-Text GLabel 3100 3500 2    60   Input ~ 0
+Text GLabel 1300 3100 2    60   Input ~ 0
 IO5
-Text GLabel 3100 3600 2    60   Input ~ 0
+Text GLabel 1300 3200 2    60   Input ~ 0
 IO17
-Text GLabel 3100 3700 2    60   Input ~ 0
+Text GLabel 1300 3300 2    60   Input ~ 0
 IO16
 $Comp
 L badge-rescue:Conn_01x05 J8
 U 1 1 5AD7E240
-P 2900 3500
-F 0 "J8" H 2900 3800 50  0000 C CNN
-F 1 "Right3" H 2900 3200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 2900 3500 50  0001 C CNN
-F 3 "" H 2900 3500 50  0001 C CNN
-	1    2900 3500
+P 1100 3100
+F 0 "J8" H 1100 3400 50  0000 C CNN
+F 1 "Right3" H 1100 2800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1100 3100 50  0001 C CNN
+F 3 "" H 1100 3100 50  0001 C CNN
+	1    1100 3100
 	-1   0    0    1   
 $EndComp
 $Comp
 L badge-rescue:Conn_01x01 J9
 U 1 1 5AD7E2BD
-P 2900 4000
-F 0 "J9" H 2900 4100 50  0000 C CNN
-F 1 "Right4" H 2900 3900 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 2900 4000 50  0001 C CNN
-F 3 "" H 2900 4000 50  0001 C CNN
-	1    2900 4000
+P 1100 3950
+F 0 "J9" H 1100 4050 50  0000 C CNN
+F 1 "Right4" H 1100 3850 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 1100 3950 50  0001 C CNN
+F 3 "" H 1100 3950 50  0001 C CNN
+	1    1100 3950
 	-1   0    0    1   
 $EndComp
-Text GLabel 3100 4000 2    60   Input ~ 0
+Text GLabel 1300 3950 2    60   Input ~ 0
 IO0
 $Comp
 L power:VSS #PWR07
@@ -685,7 +681,6 @@ Connection ~ 3000 1600
 Connection ~ 4000 1600
 Connection ~ 5000 1600
 Connection ~ 6000 1600
-NoConn ~ 10850 1300
 Wire Wire Line
 	9000 1300 9050 1300
 Wire Wire Line
@@ -695,54 +690,54 @@ Connection ~ 9800 5000
 $Comp
 L badge-rescue:Conn_01x01 J13
 U 1 1 5AF8C2A5
-P 950 6000
-F 0 "J13" H 950 6100 50  0000 C CNN
-F 1 "Penny0" H 950 5900 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 950 6000 50  0001 C CNN
-F 3 "" H 950 6000 50  0001 C CNN
-	1    950  6000
+P 1100 6650
+F 0 "J13" H 1100 6750 50  0000 C CNN
+F 1 "Penny0" H 1100 6550 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 1100 6650 50  0001 C CNN
+F 3 "" H 1100 6650 50  0001 C CNN
+	1    1100 6650
 	-1   0    0    1   
 $EndComp
 $Comp
 L badge-rescue:Conn_01x01 J12
 U 1 1 5AF8C41B
-P 950 5700
-F 0 "J12" H 950 5800 50  0000 C CNN
-F 1 "Penny1" H 950 5600 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 950 5700 50  0001 C CNN
-F 3 "" H 950 5700 50  0001 C CNN
-	1    950  5700
+P 1100 6350
+F 0 "J12" H 1100 6450 50  0000 C CNN
+F 1 "Penny1" H 1100 6250 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 1100 6350 50  0001 C CNN
+F 3 "" H 1100 6350 50  0001 C CNN
+	1    1100 6350
 	-1   0    0    1   
 $EndComp
 $Comp
 L badge-rescue:Conn_01x01 J5
 U 1 1 5AF8C77A
-P 950 5100
-F 0 "J5" H 950 5200 50  0000 C CNN
-F 1 "Penny3" H 950 5000 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 950 5100 50  0001 C CNN
-F 3 "" H 950 5100 50  0001 C CNN
-	1    950  5100
+P 1100 5750
+F 0 "J5" H 1100 5850 50  0000 C CNN
+F 1 "Penny3" H 1100 5650 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 1100 5750 50  0001 C CNN
+F 3 "" H 1100 5750 50  0001 C CNN
+	1    1100 5750
 	-1   0    0    1   
 $EndComp
 $Comp
 L badge-rescue:Conn_01x01 J11
 U 1 1 5AF8C780
-P 950 5400
-F 0 "J11" H 950 5500 50  0000 C CNN
-F 1 "Penny2" H 950 5300 50  0000 C CNN
-F 2 "Wire_Pads:Penny" H 950 5400 50  0001 C CNN
-F 3 "" H 950 5400 50  0001 C CNN
-	1    950  5400
+P 1100 6050
+F 0 "J11" H 1100 6150 50  0000 C CNN
+F 1 "Penny2" H 1100 5950 50  0000 C CNN
+F 2 "Wire_Pads:Penny" H 1100 6050 50  0001 C CNN
+F 3 "" H 1100 6050 50  0001 C CNN
+	1    1100 6050
 	-1   0    0    1   
 $EndComp
-Text GLabel 1150 5100 2    60   Input ~ 0
+Text GLabel 1300 5750 2    60   Input ~ 0
 P3
-Text GLabel 1150 5400 2    60   Input ~ 0
+Text GLabel 1300 6050 2    60   Input ~ 0
 P2
-Text GLabel 1150 6000 2    60   Input ~ 0
+Text GLabel 1300 6650 2    60   Input ~ 0
 P0
-Text GLabel 1150 5700 2    60   Input ~ 0
+Text GLabel 1300 6350 2    60   Input ~ 0
 P1
 $Comp
 L power:VSS #PWR09
@@ -791,34 +786,34 @@ $EndComp
 $Comp
 L badge-rescue:Conn_01x02 J14
 U 1 1 5AF927B2
-P 3900 2650
-F 0 "J14" H 3900 2750 50  0000 C CNN
-F 1 "Power" H 3900 2450 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 3900 2650 50  0001 C CNN
-F 3 "" H 3900 2650 50  0001 C CNN
-	1    3900 2650
+P 1100 5400
+F 0 "J14" H 1100 5500 50  0000 C CNN
+F 1 "Power" H 1100 5200 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_2x_1mmDrill" H 1100 5400 50  0001 C CNN
+F 3 "" H 1100 5400 50  0001 C CNN
+	1    1100 5400
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:VSS #PWR013
 U 1 1 5AF92923
-P 4100 2550
-F 0 "#PWR013" H 4100 2400 50  0001 C CNN
-F 1 "VSS" H 4100 2700 50  0000 C CNN
-F 2 "" H 4100 2550 50  0001 C CNN
-F 3 "" H 4100 2550 50  0001 C CNN
-	1    4100 2550
+P 1300 5300
+F 0 "#PWR013" H 1300 5150 50  0001 C CNN
+F 1 "VSS" H 1300 5450 50  0000 C CNN
+F 2 "" H 1300 5300 50  0001 C CNN
+F 3 "" H 1300 5300 50  0001 C CNN
+	1    1300 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VDD #PWR014
 U 1 1 5AF92987
-P 4100 2650
-F 0 "#PWR014" H 4100 2500 50  0001 C CNN
-F 1 "VDD" H 4100 2800 50  0000 C CNN
-F 2 "" H 4100 2650 50  0001 C CNN
-F 3 "" H 4100 2650 50  0001 C CNN
-	1    4100 2650
+P 1300 5400
+F 0 "#PWR014" H 1300 5250 50  0001 C CNN
+F 1 "VDD" H 1300 5550 50  0000 C CNN
+F 2 "" H 1300 5400 50  0001 C CNN
+F 3 "" H 1300 5400 50  0001 C CNN
+	1    1300 5400
 	0    1    1    0   
 $EndComp
 $Comp
@@ -884,10 +879,6 @@ Wire Wire Line
 	8850 1600 9000 1600
 Wire Wire Line
 	9850 1600 10000 1600
-Wire Wire Line
-	10050 1100 10950 1100
-Wire Wire Line
-	10850 1600 10950 1600
 Wire Wire Line
 	7550 3400 7550 3350
 Wire Wire Line
@@ -1113,12 +1104,12 @@ Wire Wire Line
 $Comp
 L power:VSS #PWR019
 U 1 1 5C34477D
-P 2900 4750
-F 0 "#PWR019" H 2900 4600 50  0001 C CNN
-F 1 "VSS" H 2917 4923 50  0000 C CNN
-F 2 "" H 2900 4750 50  0001 C CNN
-F 3 "" H 2900 4750 50  0001 C CNN
-	1    2900 4750
+P 2900 4450
+F 0 "#PWR019" H 2900 4300 50  0001 C CNN
+F 1 "VSS" H 2917 4623 50  0000 C CNN
+F 2 "" H 2900 4450 50  0001 C CNN
+F 3 "" H 2900 4450 50  0001 C CNN
+	1    2900 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1366,5 +1357,35 @@ $EndComp
 NoConn ~ 3300 5300
 NoConn ~ 9650 3600
 NoConn ~ 9650 3700
-Connection ~ 7800 5050
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5C7F054A
+P 4800 3800
+F 0 "J2" H 4850 4117 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4850 4026 50  0000 C CNN
+F 2 "" H 4800 3800 50  0001 C CNN
+F 3 "~" H 4800 3800 50  0001 C CNN
+	1    4800 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 1300 10950 1300
+Wire Wire Line
+	10950 1300 10950 1850
+NoConn ~ 1050 1400
+$Comp
+L Device:R_Small R5
+U 1 1 5C9B4547
+P 2900 4600
+F 0 "R5" H 2959 4646 50  0000 L CNN
+F 1 "1.5" H 2959 4555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 2900 4600 50  0001 C CNN
+F 3 "~" H 2900 4600 50  0001 C CNN
+	1    2900 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4500 2900 4450
+Wire Wire Line
+	2900 4750 2900 4700
 $EndSCHEMATC
