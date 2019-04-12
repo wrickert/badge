@@ -1,3 +1,38 @@
 import rainbowPiano
+import time
+
+# POST stuff for testing
+rainbowPiano.setTone(1)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(1)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(2)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(2)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(3)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(4)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(3)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(3)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(2)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+rainbowPiano.setTone(1)
+time.sleep(0.5)
+rainbowPiano.setTone(0)
+
+rainbowPiano.clear()
 
 rainbowPiano.keys()

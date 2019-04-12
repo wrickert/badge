@@ -3,39 +3,40 @@ import time
 import neopixel
 
 
-#TODO fix this
 pin13 = machine.Pin(13)
 speaker = machine.PWM(pin13)
 speaker.duty(0)
 
 t0 = machine.TouchPad(machine.Pin(4))
-t1 = machine.TouchPad(machine.Pin(12))
-t2 = machine.TouchPad(machine.Pin(14))
-t3 = machine.TouchPad(machine.Pin(15))
+t1 = machine.TouchPad(machine.Pin(15))
+t2 = machine.TouchPad(machine.Pin(12))
+t3 = machine.TouchPad(machine.Pin(14))
 
-np = neopixel.NeoPixel(machine.Pin(25), 10, bpp=4)
+np = neopixel.NeoPixel(machine.Pin(25), 10)
+#np = neopixel.NeoPixel(machine.Pin(25), 10, bpp=4)
 
 current = 0
 thresh = 350
-colors = [(0,0,0,0),(0,0,0,0)]
+colors = [(0,0,0),(0,0,0)]
 
+# This function controls adding colors to the neopixel strip
 def stackColor(key):
     global colors
 
     if key == 1:
-        colors.insert(0,(255,0,0,0))
+        colors.insert(0,(255,0,0))
     if key == 2:
-        colors.insert(0,(0,255,0,0))
+        colors.insert(0,(0,255,0))
     if key == 3:
-        colors.insert(0,(0,0,255,0))
+        colors.insert(0,(0,0,255))
     if key == 4:
-        colors.insert(0,(0,0,0,255))
+        colors.insert(0,(0,255,255))
 
     print(colors)
     
     size = len(colors)
     if size > 10:
-boot        size = 10
+        size = 10
         colors.pop()
 
     for i in range(0, size): 
@@ -43,6 +44,7 @@ boot        size = 10
 
     np.write()
 
+# Program starts here
 def keys():
     global thresh
     while True:
@@ -94,3 +96,9 @@ def setTone(key):
         speaker.duty(100)
         speaker.freq(587)
         current = 4
+
+def clear():
+    for i in range(10):
+        np[i] = (0,0,0)
+        np.write() 
+        time.sleep(0.02)
