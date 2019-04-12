@@ -1,6 +1,7 @@
 import machine
 import time
 import neopixel
+from notes import *
 
 
 pin13 = machine.Pin(13)
@@ -102,3 +103,10 @@ def clear():
         np[i] = (0,0,0)
         np.write() 
         time.sleep(0.02)
+
+
+def play_note(freq: int, play_time: float = 0.5):
+    speaker.duty(100)
+    speaker.freq(freq)
+    time.sleep(play_time)
+    speaker.duty(0)
