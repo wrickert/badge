@@ -1,1 +1,8 @@
-This is my proposed badge for bsidesIowa 2018. All engineering is a sliding scale of cost/functionality. At the top end I would like to propose a badge that uses the esp32 to create a piano. Optional features as I have time include using the built in bluetooth to embed a code in a blinking led to allow someone else to control your piano.
+<h2> BSidesIowa 2019 Badge </h2>
+The badge for BSidesIowa 2019 conference is a penny piano running on an ESP32 microcontroller running micropython.
+This badge is fully rechargeable and all that is required to program it is a micro usb cable. 
+
+<h3> Micropython </h3>
+The micropython REPL prompt can be accessed using a serial console running at 115400 baud. 
+Documentation for micropython can be found here, https://docs.micropython.org/en/latest/esp32/quickref.html
+
