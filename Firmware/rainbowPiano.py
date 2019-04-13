@@ -48,24 +48,27 @@ def stackColor(key):
 def keys():
     global thresh
     while True:
-        if t0.read() < thresh:
-            time.sleep(0.02)
+        try:
             if t0.read() < thresh:
-                setTone(1)
-        elif t1.read() < thresh:
-            time.sleep(0.02)
-            if t1.read() < thresh:
-                setTone(2)
-        elif t2.read() < thresh:
-            time.sleep(0.02)
-            if t2.read() < thresh:
-                setTone(3)
-        elif t3.read() < thresh:
-            time.sleep(0.02)
-            if t3.read() < thresh:
-                setTone(4)
-        else:
-            setTone(0)
+                time.sleep(0.02)
+                if t0.read() < thresh:
+                    setTone(1)
+            elif t1.read() < thresh:
+                time.sleep(0.02)
+                if t1.read() < thresh:
+                    setTone(2)
+            elif t2.read() < thresh:
+                time.sleep(0.02)
+                if t2.read() < thresh:
+                    setTone(3)
+            elif t3.read() < thresh:
+                time.sleep(0.02)
+                if t3.read() < thresh:
+                    setTone(4)
+            else:
+                setTone(0)
+        except ValueError:
+            machine.reset() 
 
 def setTone(key):
     global current
