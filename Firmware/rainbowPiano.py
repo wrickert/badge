@@ -68,6 +68,9 @@ def keys():
             else:
                 setTone(0)
         except ValueError:
+            f = open('silent.txt', 'w')
+            f.write('t')
+            f.close()
             machine.reset() 
 
 def setTone(key):
@@ -102,6 +105,6 @@ def setTone(key):
 
 def clear():
     for i in range(10):
-        np[i] = (0,0,0)
+        colors[i] = (0,0,0)
         np.write() 
         time.sleep(0.02)
