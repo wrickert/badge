@@ -3,22 +3,32 @@ import time
 import neopixel
 from notes import *
 
+import esp32
 
 pin13 = machine.Pin(13)
 speaker = machine.PWM(pin13)
 speaker.duty(0)
+
+current = 0
+thresh = 350
+colors = [(0,0,0),(0,0,0)]
 
 t0 = machine.TouchPad(machine.Pin(4))
 t1 = machine.TouchPad(machine.Pin(15))
 t2 = machine.TouchPad(machine.Pin(12))
 t3 = machine.TouchPad(machine.Pin(14))
 
+t0.config(thresh)
+t1.config(thresh)
+t2.config(thresh)
+t3.config(thresh)
+
 np = neopixel.NeoPixel(machine.Pin(25), 10)
 #np = neopixel.NeoPixel(machine.Pin(25), 10, bpp=4)
 
-current = 0
-thresh = 350
-colors = [(0,0,0),(0,0,0)]
+
+esp32.wake_on_touch(True)
+
 
 # This function controls adding colors to the neopixel strip
 def stackColor(key):
@@ -31,7 +41,7 @@ def stackColor(key):
     if key == 3:
         colors.insert(0,(0,0,255))
     if key == 4:
-        colors.insert(0,(0,255,255))
+        colors.insert(0,(255,255,0))
 
     print(colors)
     
@@ -49,24 +59,32 @@ def stackColor(key):
 def keys():
     global thresh
     while True:
-        if t0.read() < thresh:
-            time.sleep(0.02)
+        try:
             if t0.read() < thresh:
-                setTone(1)
-        elif t1.read() < thresh:
-            time.sleep(0.02)
-            if t1.read() < thresh:
-                setTone(2)
-        elif t2.read() < thresh:
-            time.sleep(0.02)
-            if t2.read() < thresh:
-                setTone(3)
-        elif t3.read() < thresh:
-            time.sleep(0.02)
-            if t3.read() < thresh:
-                setTone(4)
-        else:
-            setTone(0)
+                time.sleep(0.02)
+                if t0.read() < thresh:
+                    setTone(1)
+            elif t1.read() < thresh:
+                time.sleep(0.02)
+                if t1.read() < thresh:
+                    setTone(2)
+            elif t2.read() < thresh:
+                time.sleep(0.02)
+                if t2.read() < thresh:
+                    setTone(3)
+            elif t3.read() < thresh:
+                time.sleep(0.02)
+                if t3.read() < thresh:
+                    setTone(4)
+            else:
+                setTone(0)
+            #print("Going to sleep")
+            #machine.lightsleep()
+        except ValueError:
+            f = open('silent.txt', 'w')
+            f.write('t')
+            f.close()
+            machine.reset()
 
 def setTone(key):
     global current
@@ -100,6 +118,7 @@ def setTone(key):
 
 def clear():
     for i in range(10):
+        colors[i] = (0,0,0)
         np[i] = (0,0,0)
         np.write() 
         time.sleep(0.02)
