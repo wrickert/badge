@@ -2,6 +2,9 @@ import rainbowPiano
 import time
 from notes import *
 from math import ceil
+import machine
+
+machine.freq(80000000)
 
 
 def play_zelda():
@@ -84,6 +87,8 @@ def play_zelda():
     rainbowPiano.play_note(ceil((AS5 + F5) / 2))
 
     rainbowPiano.clear()
+
+
 
 
 # POST stuff for testing

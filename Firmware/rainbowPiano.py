@@ -1,5 +1,6 @@
 import machine
 import time
+import utime
 import neopixel
 from notes import *
 import random
@@ -11,7 +12,7 @@ speaker = machine.PWM(pin13)
 speaker.duty(0)
 
 current = 0
-thresh = 350
+thresh = 500
 colors = [(0,0,0),(0,0,0)]
 
 t0 = machine.TouchPad(machine.Pin(4))
@@ -27,6 +28,7 @@ t3.config(thresh)
 np = neopixel.NeoPixel(machine.Pin(25), 10)
 #np = neopixel.NeoPixel(machine.Pin(25), 10, bpp=4)
 
+hx = machine.Pin(27, machine.Pin.PULL_UP)
 
 esp32.wake_on_touch(True)
 
@@ -36,13 +38,13 @@ def stackColor(key):
     global colors
 
     if key == 1:
-        colors.insert(0,(255,0,0))
+        colors.insert(0,(50,0,0))
     if key == 2:
-        colors.insert(0,(0,255,0))
+        colors.insert(0,(0,50,0))
     if key == 3:
-        colors.insert(0,(0,0,255))
+        colors.insert(0,(0,0,50))
     if key == 4:
-        colors.insert(0,(255,255,0))
+        colors.insert(0,(50,50,0))
 
     print(colors)
     
@@ -56,31 +58,71 @@ def stackColor(key):
 
     np.write()
 
+def dimColors():
+    global colors
+    for i in range(10):
+        if colors[i] == (50,0,0):
+            np[i] = (2,0,0)
+        elif colors[i] == (0,50,0):
+            np[i] = (0,2,0)
+        elif colors[i] == (0,0,50):
+            np[i] = (0,0,2)
+        elif colors[i] == (50,50,0):
+            np[i] = (2,2,0)
+        np.write()
+
 # Program starts here
 def keys():
     global thresh
+    start = utime.time()
+    dim = False
+    dOff = False
+
     while True:
         try:
             if t0.read() < thresh:
                 time.sleep(0.02)
                 if t0.read() < thresh:
                     setTone(1)
+                start = utime.time()            
+                dim = False
+                dOff = False
             elif t1.read() < thresh:
                 time.sleep(0.02)
                 if t1.read() < thresh:
                     setTone(2)
+                start = utime.time()            
+                dim = False
+                dOff = False
             elif t2.read() < thresh:
                 time.sleep(0.02)
                 if t2.read() < thresh:
                     setTone(3)
+                start = utime.time()            
+                dim = False
+                dOff = False
             elif t3.read() < thresh:
                 time.sleep(0.02)
                 if t3.read() < thresh:
                     setTone(4)
+                start = utime.time()            
+                dim = False
+                dOff = False
             else:
                 setTone(0)
-            #print("Going to sleep")
-            #machine.lightsleep()
+
+            if ( utime.time() - start) > 60 and not dim:
+                print("Dimming")    
+                dim = True
+                dimColors()
+            if ( utime.time() - start) > 240 and not dOff:
+                print("Display Off")
+                dOff = True
+                for i in range(10):
+                    np[i] = (0,0,0)
+                    time.sleep(0.02)
+                    np.write()
+                start = utime.time()            
         except ValueError:
             f = open('silent.txt', 'w')
             f.write('t')
@@ -125,6 +167,7 @@ def clear():
         time.sleep(0.02)
 
 
+
 def play_note(freq: int, play_time: float = .2):
     """
     Plays a note of frequency `freq` for duration `play_time`, and lights up a random LED for fun
@@ -137,3 +180,13 @@ def play_note(freq: int, play_time: float = .2):
     stackColor(random.randint(1, 4))
     time.sleep(play_time)
     speaker.duty(0)
+    
+# This function checks the charing stats
+def battery():
+    if hx.value() == 0:
+        print("Charged")
+    else:
+        print("Charging") 
+
+        
+
