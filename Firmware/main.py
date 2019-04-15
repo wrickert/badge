@@ -1,5 +1,8 @@
 import rainbowPiano
 import time
+import machine
+
+machine.freq(80000000)
 
 # POST stuff for testing
 f = open('silent.txt')
