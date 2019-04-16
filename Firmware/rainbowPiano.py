@@ -112,7 +112,7 @@ def keys():
                 print("Dimming")    
                 dim = True
                 dimColors()
-            if ( utime.time() - start) > 240 and not dOff:
+            if ( utime.time() - start) > 140 and not dOff:
                 print("Display Off")
                 dOff = True
                 for i in range(10):
