@@ -104,5 +104,6 @@ else:
     f.write('f')
 
 f.close()
+machine.freq(40000000)
 rainbowPiano.keys()
 
