@@ -44,7 +44,7 @@ def stackColor(key):
     if key == 3:
         colors.insert(0,(0,0,50))
     if key == 4:
-        colors.insert(0,(50,50,0))
+        colors.insert(0,(40,40,0))
 
     print(colors)
     
@@ -77,6 +77,7 @@ def keys():
     start = utime.time()
     dim = False
     dOff = False
+    wait = False
 
     while True:
         try:
@@ -85,37 +86,49 @@ def keys():
                 if t0.read() < thresh:
                     setTone(1)
                 start = utime.time()            
+                if wait:
+                    machine.freq(40000000)
                 dim = False
                 dOff = False
+                wait = False
             elif t1.read() < thresh:
                 time.sleep(0.02)
                 if t1.read() < thresh:
                     setTone(2)
                 start = utime.time()            
+                if wait:
+                    machine.freq(40000000)
                 dim = False
                 dOff = False
+                wait = False
             elif t2.read() < thresh:
                 time.sleep(0.02)
                 if t2.read() < thresh:
                     setTone(3)
                 start = utime.time()            
+                if wait:
+                    machine.freq(40000000)
                 dim = False
                 dOff = False
+                wait = False
             elif t3.read() < thresh:
                 time.sleep(0.02)
                 if t3.read() < thresh:
                     setTone(4)
                 start = utime.time()            
+                if wait:
+                    machine.freq(40000000)
                 dim = False
                 dOff = False
+                wait = False
             else:
                 setTone(0)
 
-            if ( utime.time() - start) > 60 and not dim:
+            if ( utime.time() - start) > 30 and not dim:
                 print("Dimming")    
                 dim = True
                 dimColors()
-            if ( utime.time() - start) > 140 and not dOff:
+            if ( utime.time() - start) > 120 and not dOff:
                 print("Display Off")
                 dOff = True
                 for i in range(10):
@@ -123,6 +136,14 @@ def keys():
                     time.sleep(0.02)
                     np.write()
                 start = utime.time()            
+                wait = True
+                machine.freq(20000000)
+
+            # This bit of code takes the current consumption to ~4mA
+            # but it causes a bit of delay to wake up from sleep
+            # If that annoys you take it out and sleep will be ~14mA
+            if wait:
+                machine.sleep(1000)
         except ValueError:
             f = open('silent.txt', 'w')
             f.write('t')
