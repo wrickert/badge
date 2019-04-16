@@ -86,8 +86,7 @@ def play_zelda():
     time.sleep(.001)
     rainbowPiano.play_note(ceil((AS5 + F5) / 2))
 
-    rainbowPiano.clear()
-
+    #rainbowPiano.clear()
 
 
 
@@ -96,7 +95,7 @@ f = open('silent.txt')
 if f.read() == 'f':
     play_zelda()
 
-    rainbowPiano.clear()
+    rainbowPiano.inital()
 
 else:
     f.close()

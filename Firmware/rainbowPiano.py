@@ -8,6 +8,7 @@ import random
 import esp32
 
 pin13 = machine.Pin(13)
+pin16 = machine.Pin(16, machine.Pin.IN, machine.Pin.PULL_UP)
 speaker = machine.PWM(pin13)
 speaker.duty(0)
 
@@ -58,6 +59,7 @@ def stackColor(key):
 
     np.write()
 
+# Dimming to save battery life
 def dimColors():
     global colors
     for i in range(10):
@@ -67,7 +69,7 @@ def dimColors():
             np[i] = (0,2,0)
         elif colors[i] == (0,0,50):
             np[i] = (0,0,2)
-        elif colors[i] == (50,50,0):
+        elif colors[i] == (40,40,0):
             np[i] = (2,2,0)
         np.write()
 
@@ -124,18 +126,21 @@ def keys():
             else:
                 setTone(0)
 
-            if ( utime.time() - start) > 30 and not dim:
+            if not pin16:
+                flash()
+
+            if ( utime.time() - start) > 30 and not dim and not wait:
                 print("Dimming")    
                 dim = True
                 dimColors()
-            if ( utime.time() - start) > 120 and not dOff:
+            if ( utime.time() - start) > 120 and not dOff and not wait:
                 print("Display Off")
                 dOff = True
                 for i in range(10):
                     np[i] = (0,0,0)
                     time.sleep(0.02)
                     np.write()
-                start = utime.time()            
+                #start = utime.time()            
                 wait = True
                 machine.freq(20000000)
 
@@ -144,12 +149,15 @@ def keys():
             # If that annoys you take it out and sleep will be ~14mA
             if wait:
                 machine.sleep(1000)
+
+                print("Time " + str(utime.time() - start) + str(dim) +  str(dOff)+str(wait))
         except ValueError:
             f = open('silent.txt', 'w')
             f.write('t')
             f.close()
             machine.reset()
 
+# Contols the piezo speaker
 def setTone(key):
     global current
     if key == 0:
@@ -180,6 +188,7 @@ def setTone(key):
         speaker.freq(D5)
         current = 4
 
+# Clears the display
 def clear():
     for i in range(10):
         colors[i] = (0,0,0)
@@ -187,7 +196,15 @@ def clear():
         np.write() 
         time.sleep(0.02)
 
-
+# Highlights the Des Moines skyline silkscreen and welcome message
+def inital():
+    clear()
+    print("Welcome to BSides Iowa 2019. Press Control+C to exit running program and enter REPL")
+    np[2] = (0,0,50)
+    np[3] = (0,0,50)
+    np[4] = (0,0,50)
+    np[5] = (0,0,50)
+    np.write()
 
 def play_note(freq: int, play_time: float = .2):
     """
@@ -209,5 +226,7 @@ def battery():
     else:
         print("Charging") 
 
-        
-
+# An attempt to make this eaiser to flash in bulk
+def flash():
+    print("Ready for flashing")
+    sys.exit()
