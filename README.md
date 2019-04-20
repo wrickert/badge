@@ -11,3 +11,7 @@ The badge can be programmed directly through the REPL prompt on the serial conso
 
 Common ampy commands:<br>
 To program the board: ampy -p /dev/ttyUSB0 put main.py
+
+<h3> Troubleshooting </h3>
+If you encounter problems programming the badge using ampy it may be because the badge is in sleep mode. Press any penny to wake the badge up and then you should be able to program.<br>
+Note: sleep mode has a polling interval of 1 second, there may be a delay of up to 1 second before badge responds.<br>

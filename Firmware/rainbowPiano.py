@@ -4,6 +4,7 @@ import utime
 import neopixel
 from notes import *
 import random
+import urandom
 
 import esp32
 
@@ -83,6 +84,8 @@ def keys():
 
     while True:
         try:
+            if t0.read() < thresh and t1.read() < thresh and t2.read() < thresh and t3.read() < thresh:
+                party()
             if t0.read() < thresh:
                 time.sleep(0.02)
                 if t0.read() < thresh:
@@ -150,12 +153,39 @@ def keys():
             if wait:
                 machine.sleep(1000)
 
-                print("Time " + str(utime.time() - start) + str(dim) +  str(dOff)+str(wait))
         except ValueError:
             f = open('silent.txt', 'w')
             f.write('t')
             f.close()
             machine.reset()
+
+def party():
+    print("Big american party!")
+    setTone(0)
+    if t0.read() < thresh and t1.read() < thresh and t2.read() < thresh and t3.read() < thresh:
+        while t0.read() < thresh:
+            print("Move your fat fingers") 
+    while True:
+        for i in range(10):
+            choice = urandom.randint(0,4)
+            if choice == 0:
+                np[i] = (255,0,0)
+            if choice == 1:
+                np[i] = (0,255,0)
+            if choice == 2:
+                np[i] = (0,0,255)
+            if choice == 3:
+                np[i] = (200,200,0)
+            if choice == 4:
+                np[i] = (0,0,0)
+            #np[i] = (urandom.randint(0,255),urandom.randint(0,255),urandom.randint(0,255))
+            np.write()
+            time.sleep(0.05)
+            if t0.read() < thresh and t1.read() < thresh and t2.read() < thresh and t3.read() < thresh:
+                while t0.read() < thresh:
+                    print("Move your fat fingers") 
+                keys()
+
 
 # Contols the piezo speaker
 def setTone(key):
