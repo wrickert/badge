@@ -1,0 +1,112 @@
+#rename to main.py to use with exsisting code
+import rainbowPiano
+import time
+from notes import *
+from math import ceil
+import machine
+
+machine.freq(80000000)
+
+def play_mario():
+    """
+    Play the main theme from Mario Brothers.
+    :return:
+    """
+    rainbowPiano.play_note(E7)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(C7)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(G7)
+    time.sleep(.091)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(G6)
+    time.sleep(.091)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(C7)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(G6)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(E6)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(A6)
+    time.sleep(.091)
+    rainbowPiano.play_note(B6)
+    time.sleep(.091)
+    rainbowPiano.play_note(AS6)
+    rainbowPiano.play_note(A6)
+    time.sleep(.091)
+    rainbowPiano.play_note(G6)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(G7)
+    rainbowPiano.play_note(A7)
+    time.sleep(.091)
+    rainbowPiano.play_note(F7)
+    rainbowPiano.play_note(G7)
+    time.sleep(.091)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(C7)
+    rainbowPiano.play_note(D7)
+    rainbowPiano.play_note(B6)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(C7)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(G6)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(E6)
+    time.sleep(.091)
+    time.sleep(.091)
+    rainbowPiano.play_note(A6)
+    time.sleep(.091)
+    rainbowPiano.play_note(B6)
+    time.sleep(.091)
+    rainbowPiano.play_note(AS6)
+    rainbowPiano.play_note(A6)
+    time.sleep(.091)
+    rainbowPiano.play_note(G6)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(G7)
+    rainbowPiano.play_note(A7)
+    time.sleep(.091)
+    rainbowPiano.play_note(F7)
+    rainbowPiano.play_note(G7)
+    time.sleep(.091)
+    rainbowPiano.play_note(E7)
+    time.sleep(.091)
+    rainbowPiano.play_note(C7)
+    rainbowPiano.play_note(D7)
+    rainbowPiano.play_note(B6)
+    time.sleep(.091)
+    time.sleep(.091)
+
+    #rainbowPiano.clear()
+
+# POST stuff for testing
+f = open('silent.txt')
+if f.read() == 'f':
+    play_mario()
+
+    rainbowPiano.inital()
+
+else:
+    f.close()
+    f = open('silent.txt', 'w')
+    f.write('f')
+
+f.close()
+machine.freq(40000000)
+rainbowPiano.keys()
